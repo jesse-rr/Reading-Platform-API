@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: reading-platform
+
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    username: jrr
+    password: admin
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/reading
+
+  mail:
+    host: smtp.gmail.com
+    port: 25
+    default-encoding: UTF-8
+    protocol: smtp
+    username: jessericardorogerio@gmail.com
+    password: vqeq ucqj jyol hxib
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+    elasticsearch:
+      repositories:
+        enabled: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 997145979510-fqokun67nkkesgcgjcqa3qcbi4h6s7dc.apps.googleusercontent.com # TODO REMOVE LATER
+            client-secret: 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
+            scope:
+              - email
+              - profile
+
+jwt:
+  secret-key: 0121daa4c50cf9ccfbf83b836ecdc728856038176e127f8562cdf0613019916d
+  expiration-time: 3600000
+
+email:
+  verification-code:
+    expiration-time: 10
+
+server:
+  port: 8080

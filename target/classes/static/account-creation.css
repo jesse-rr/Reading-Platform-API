@@ -1,0 +1,91 @@
+:root {
+  --title-font: "Roboto Condensed", serif;
+  --paragraph-font: Arial, Helvetica, sans-serif;
+  
+  --color1: #0C0C0C;
+  --color2: #3C3D37;
+  --color3: #481E14;
+  --color4: #9B3922;
+  --color5: #F2613F;
+  --color6: #c3c3c3;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  background-color: var(--color6);
+}
+.form-title {
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: var(--color4);
+  background-color: rgba(0, 0, 0, 0.11);
+  padding: 10px;
+  box-shadow: 0 0 3px black;
+}
+.main {
+  background-color: white;
+  width: 600px;
+  max-height: 720px;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 0 6px black;
+  position: relative;
+}
+.background {
+  position: absolute;
+  top: 65;
+  left: -20;
+  width: 107%;
+  height: 85%;
+  background-color: black;
+  background-image: url('/stock/diagonal-striped-brick.png');
+  background-position: center;
+  border-radius: 8px;
+  z-index: -1;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.input {
+  background-color: transparent;
+  padding: 10px 3px;
+  border: 0px solid black;
+  margin: 20px 0;
+  font-size: 1.1em;
+  border-bottom-width: 3px;
+}
+.form label {
+  font-size: 1.3em;
+}
+.btn {
+  background-color: var(--color4);
+  margin: 10px 5px;
+  width: 200px;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+}
+.form-buttons {
+  align-self: center;
+}
+.copyright {
+  text-align: center;
+  color: var(--color4);
+}
+.btn:hover {
+  transition: .2s ease-in-out all;
+  transform: scale(1.02);
+  background-color: var(--color3);
+}

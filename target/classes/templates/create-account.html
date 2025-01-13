@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration Form</title>
+  <link rel="stylesheet" href="/static/account-creation.css">
+</head>
+<body>
+  <main class="main">
+    <div class="background"></div>
+    <p class="form-title">Create Account</p>
+    <form th:action="@{/register}" class="form" action="http://localhost:8080/api/v1/users" method="post">
+      <label for="login">Login:</label>
+      <input type="text" name="login" id="login" placeholder="Enter your login" required class="input">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" placeholder="Enter your username" class="input">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required class="input">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="Enter your password" required class="input">
+      <div class="form-buttons">
+        <input type="submit" value="Register Account" class="btn">
+        <input type="button" value="Sign in" class="btn">
+      </div>
+    </form>
+    <p class="copyright">
+      &copy; Copyright 2024 - Reading Platform
+    </p>
+  </main>
+</body>
