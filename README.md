@@ -1,4 +1,4 @@
-# Reading-Platform-API-Backend
+# Reading-Platform-MVP
 The Reading Platform Backend API provides a set of RESTful endpoints designed to manage user activities, books, reading progress, and recommendations on a digital reading platform. This API serves as the core infrastructure for managing user accounts, book details, reading history, and more, supporting features such as personalized recommendations, bookmarking, etc...
 
 ### Key Features
