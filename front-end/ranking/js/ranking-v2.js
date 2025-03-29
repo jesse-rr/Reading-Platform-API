@@ -150,28 +150,27 @@ const arrayOfBooks = [
     }
   }
 ];
+
 function createBooks(books, startIndex = 0, count = 4) {
   const secBooks = document.getElementById("sec_books");
   const booksToShow = books.slice(startIndex, startIndex + count);
+  const pager = {
+    name: "read later"
+  }
 
   const booksHTML = booksToShow.map(book => `
-    <div class="book_container">
+    <div class="book_container bg-animation">
       <img class="bookImage" src="${book.imageSrc}" alt="${book.bookName}" />
-      <div class="book_container_inside">
+      <div class="book-container-inside">
         <p class="book_title">${book.bookName}</p>
         <p class="book_author">Author: ${book.author}</p>
-        <div class="container_metadata">
-          <p><strong>Ranking: ${book.metadata.ranking}</strong></p>
-          <p><strong>Rating: ${book.metadata.rating}</strong></p>
-          <p><strong>Views: ${book.metadata.views}</strong></p>
-          <p><strong>Chapters: ${book.metadata.chapters}</strong></p>
-        </div>
-        <div class="container_genres" id="genres">
-          ${book.genres.map(genre => `<a>${genre}</a>`).join('')}
-        </div>
-        <button class="read_btn" type="button">Read</button>
-        <button class="read_btn" id="bookmark_id" type="button">Bookmark</button>
+        <p class="book_rating">Ranking: ${book.metadata.ranking}</p>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='stars4'></div>
       </div>
+      <div class="pager"><p class="pager-title">${pager.name}</p></div>
     </div>
   `).join('');
 
@@ -180,4 +179,4 @@ function createBooks(books, startIndex = 0, count = 4) {
 }
 
 let currentIndex = 0;
-currentIndex = createBooks(arrayOfBooks, currentIndex, 4);
+currentIndex = createBooks(arrayOfBooks, currentIndex, 20);
